@@ -1,0 +1,165 @@
+/* Reset styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Base styles */
+:root {
+  --color-primary: #009966;
+  --color-secondary: #ffbf00;
+  --color-secondary-dark: #cc9900;
+  --color-background: #666666;
+  --color-text: #000000;
+  --color-divider: #999999;
+  --font-family-base: "Lato", sans-serif;
+}
+
+body {
+  font-family: var(--font-family-base);
+  margin: 0;
+  background-color: var(--color-background);
+  line-height: 1.5;
+}
+
+/* Typography */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 3rem;
+  padding-top: 3rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+p {
+  line-height: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.text-highlight {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+/* Layout components */
+.header-content {
+  background-color: white;
+  padding: 0 200px 50px;
+  width: 100%;
+}
+
+.main-content {
+  background-color: white;
+  width: 700px;
+  height: 300px;
+  margin-left: 200px;
+  padding: 80px 20px;
+}
+
+/* Subtitle Banner with Bottom Line */
+.subtitle-banner {
+  background-color: var(--color-secondary);
+  width: 398px;
+  height: 60px;
+  text-align: center;
+  padding: 15px 10px;
+  position: relative;
+  top: 70px;
+  left: 190px;
+}
+
+/* Bottom line for subtitle banner - positioned at the bottom */
+.subtitle-banner::after {
+  content: "";
+  background-color: var(--color-secondary-dark);
+  width: 398px;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  height: 5px;
+  z-index: 1;
+}
+
+/* Dividers */
+.divider {
+  background-color: var(--color-divider);
+  border: 0;
+  height: 8px;
+  margin: 0;
+}
+
+/* Media Queries */
+@media screen and (min-width: 901px) {
+  .divider--mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header-content {
+    padding: 0 0 50px 20px;
+  }
+
+  .main-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 80px 20px;
+  }
+
+  .subtitle-banner {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .divider--mobile,
+  .br-tablet {
+    display: none;
+  }
+
+  .main-content {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .subtitle-banner {
+    left: 0;
+    width: 350px;
+    padding: 18px 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .subtitle-banner::after {
+    width: 360px;
+    left: 20px; /* Adjusted for smaller screens */
+    bottom: -5px;
+  }
+}
+
+@media screen and (max-width: 344px) {
+  .subtitle-banner {
+    width: 320px;
+  }
+
+  .subtitle-banner::after {
+    width: 330px;
+  }
+
+  .header-content {
+    padding: 0 10px 50px 20px;
+  }
+
+  .br-mobile {
+    display: none;
+  }
+}

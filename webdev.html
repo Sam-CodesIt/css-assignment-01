@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Wellness Experience - Registration</title>
+    <meta
+      name="description"
+      content="Register for our wellness program to improve your health and wellbeing"
+    />
+    <link rel="stylesheet" href="./styles.css/webdev.css" />
+    <!-- Font Family: Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9a11d66afd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="page-wrapper">
+        <section class="brand-section">
+          <img
+            src="./Images/logo.png"
+            height="100"
+            alt="Wellness Centre Logo"
+            class="brand-logo"
+          />
+
+          <div class="intro-content">
+            <h1>For Individuals</h1>
+            <p class="intro-text desktop-only">
+              Start benefiting from the wellness experience. For companies
+              looking on increasing productivity, and improving organization
+              wellness.
+            </p>
+            <p class="intro-text mobile-only">
+              Inspiring wholesome harmony for the mind, body and spirit, for
+              everyone, everywhere.
+            </p>
+          </div>
+        </section>
+
+        <section class="registration-section">
+          <form action="/submit" method="post" class="registration-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  class="form-control"
+                  placeholder="Tolu"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="gender-input">Gender</label>
+                <input
+                  list="gender"
+                  id="gender-input"
+                  class="form-control"
+                  placeholder="Select gender"
+                />
+                <datalist id="gender">
+                  <option value="Female"></option>
+                  <option value="Male"></option>
+                </datalist>
+              </div>
+
+              <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="weight">Weight (KG)</label>
+                <input
+                  type="number"
+                  name="weight"
+                  id="weight"
+                  class="form-control"
+                  placeholder="Enter Weight"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="height">Height (CM)</label>
+                <input
+                  type="number"
+                  name="height"
+                  id="height"
+                  class="form-control"
+                  placeholder="Enter height"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="activity-input">Activity Level</label>
+              <input
+                id="activity-input"
+                list="activity-level"
+                class="form-control form-control--wide"
+                placeholder="Select here"
+              />
+              <datalist id="activity-level">
+                <option value="Beginner"></option>
+                <option value="Normal"></option>
+                <option value="Expert"></option>
+              </datalist>
+            </div>
+
+            <div class="form-group password-field">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control form-control--wide"
+                required
+              />
+              <i class="fa-solid fa-eye password-toggle"></i>
+            </div>
+
+            <button type="submit" class="submit-button">Register</button>
+
+            <p class="footer-text desktop-only">
+              By clicking Register, you agree to our
+              <a href="#" class="text-highlight">Terms of Use</a> and our
+              <a href="#" class="text-highlight">Privacy Policy</a>
+            </p>
+          </form>
+        </section>
+      </div>
+
+      <p class="footer-text mobile-only">
+        By clicking Register, you agree to our
+        <a href="#" class="text-highlight">Terms of<br />Use</a> and our
+        <a href="#" class="text-highlight">Privacy Policy</a>
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base styles */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Main content wrapper */
+  .content-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px 20px;
+  }
+  
+  /* Main article container */
+  .article-card {
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    min-height: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 0 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Header styles */
+  .article-header {
+    background-color: #ff1493;
+    color: black;
+    padding: 1rem;
+    border-radius: 8px;
+    position: relative;
+    top: -20px;
+    margin: 0 20px 5px 20px;
+  }
+  
+  .article-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Article content */
+  .article-content {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 0 8px;
+    flex-grow: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .nav {
+      margin-bottom: 30px; /* Slightly less space on medium screens */
+    }
+  
+    .content-wrapper {
+      padding: 0 15px 15px;
+    }
+  
+    .article-card {
+      min-height: 300px;
+    }
+  
+    .article-title {
+      font-size: 2rem;
+    }
+  
+    .article-content {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav {
+      margin-bottom: 20px; /* Slightly less space on medium screens */
+    }
+  
+    .content-wrapper {
+      padding: 0 10px 10px;
+    }
+  
+    .article-card {
+      padding: 0 16px 16px;
+      min-height: 290px;
+    }
+  
+    .article-header {
+      margin: 0 8px 20px 8px;
+    }
+  
+    .article-title {
+      font-size: 1.75rem;
+    }
+  
+    .article-content {
+      font-size: 1.2rem;
+    }
+  }
+  
