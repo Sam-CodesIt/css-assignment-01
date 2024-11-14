@@ -141,7 +141,7 @@ p {
 
   .subtitle-banner::after {
     width: 360px;
-    left: 20px; /* Adjusted for smaller screens */
+    right: 0; /* Adjusted for smaller screens */
     bottom: -5px;
   }
 }
